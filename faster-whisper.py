@@ -10,7 +10,7 @@ model = WhisperModel(model_size, device="cuda", compute_type="float16")
 # or run on CPU with INT8
 # model = WhisperModel(model_size, device="cpu", compute_type="int8")
 
-segments, info = model.transcribe("Sword Art Online Progressive - Kuraki Yuuyami no Scherzo [BD][1080p][PT-BR][AH].mp4", beam_size=5)
+segments, info = model.transcribe("Audio.mp3", beam_size=5)
 
 print("Detected language '%s' with probability %f" % (info.language, info.language_probability))
 
